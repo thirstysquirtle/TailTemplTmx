@@ -1,0 +1,13 @@
+package view
+
+import "bjj_cms/view/layout"
+
+templ ViewCollections(colls []string) {
+	@layout.Page() {
+		<section class="flex bg-slate-500 text-white">
+			for _, col_name := range colls {
+				<h1>{ col_name }</h1>
+			}
+		</section>
+	}
+}
